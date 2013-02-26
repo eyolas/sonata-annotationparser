@@ -27,6 +27,7 @@ Create a new annotation parser.
 
 #### Create an annotation
 
+TestAnnotation.js
 
     var AbstractAnnotation = require('sonata-annotationParser').AbstractAnnotation,
         Utils = require('sonata-annotationParser').UtilsAnnotations,
@@ -41,29 +42,21 @@ Create a new annotation parser.
 
     TestAnnotation.prototype.run = function(value, target, file, filePath) {
         if (Utils.isString(value) || (value === Object(value) && value.hasOwnProperty('name'))) {
-            var scope;
-            if (Utils.isString(value)) {
-                scope = value;
-            } else {
-                scope = value.name;
-            }
-
-            var realPath = filePath;
-            var name = path.basename(file, '.js');
-            if (Utils.isString(target) && target.toLowerCase() === 'function') {
-                this.addConfig(name, realPath, scope);
-            }
+            //...
         }
     };
 
-    ScopeAnnotation.prototype.addConfig = function(name, path, scope) {
-        var config = {};
-        config.module = path;
-        config.scope = scope;
-        this.containerConfig.addConfig(name, config);
-    };
-
     module.exports = ScopeAnnotation;
+
+An object class
+
+    /**
+     * @Test
+     */
+    function object() {
+
+    }
+
 
 
 ## Credits
