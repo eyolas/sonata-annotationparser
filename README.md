@@ -1,10 +1,6 @@
 sonata-annotationParser
 =======================
 
-Parser of annotations
-
-# sonata-annotationParser
-
 Annotation parser for [Node](http://nodejs.org).
 
 ## Installation
