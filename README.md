@@ -1,16 +1,16 @@
-sonata-annotationParser
+sonata-annotationparser
 =======================
 
 Annotation parser for [Node](http://nodejs.org).
 
 ## Installation
 
-    $ npm install sonata-annotationParser
+    $ npm install sonata-annotationparser
 
 Install from source code repository:
 
-    $ git clone git@github.com:eyolas/sonata-annotationParser.git
-    $ cd sonata-annotationParser
+    $ git clone git@github.com:eyolas/sonata-annotationparser.git
+    $ cd sonata-annotationparser
     $ npm install
 
 ## Usage
@@ -19,7 +19,7 @@ Install from source code repository:
 
 Create a new annotation parser.
 
-    var annotationsParser = require('sonata-annotationParser').annotationsParser;
+    var annotationsParser = require('sonata-annotationparser').AnnotationParser;
     var parser = new annotationsParser();
     var results = parser.extract(fileName, fileDir);
 
@@ -29,8 +29,8 @@ Create a new annotation parser.
 
 TestAnnotation.js
 
-    var AbstractAnnotation = require('sonata-annotationParser').AbstractAnnotation,
-        Utils = require('sonata-annotationParser').UtilsAnnotations,
+    var AbstractAnnotation = require('sonata-annotationparser').AbstractAnnotation,
+        Utils = require('sonata-annotationparser').UtilsAnnotations,
         inherits = require('util').inherits;
 
     function TestAnnotation() {

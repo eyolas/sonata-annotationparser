@@ -1,15 +1,15 @@
 {
-    "name": "sonata-annotationParser",
+    "name": "sonata-annotationparser",
     "author": "David TOUZET <dtouzet@gmail.com>",
     "description": "Annotation Parser",
     "version": "1.0.0-alpha",
-    "homepage": "http://github.com/eyolas/sonata-annotationParser",
+    "homepage": "http://github.com/eyolas/sonata-annotationparser",
     "repository": {
         "type": "git",
-        "url": "http://github.com/eyolas/sonata-annotationParser.git"
+        "url": "http://github.com/eyolas/sonata-annotationparser.git"
     },
     "bugs" : {
-        "url" : "http://github.com/eyolas/sonata-annotationParser/issues"
+        "url" : "http://github.com/eyolas/sonata-annotationparser/issues"
     },
     "keywords": [
         "annotations",
