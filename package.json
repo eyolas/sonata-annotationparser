@@ -18,6 +18,7 @@
     "main": "index.js",
     "license": "mit",
     "dependencies": {
+        "glob" : ">=3.1.17"
     },
     "devDependencies": {
     },

@@ -13,9 +13,14 @@ Install from source code repository:
     $ cd sonata-annotationparser
     $ npm install
 
-## Usage
+## Usage parse one file
+### Definition of annotation in files
 
-### Parsing without class of annotation
+* Must be in comment who start by `/**` and finish by `*/`
+* start by `@`
+* value must be wrapped in `(` `)`
+
+### Parsing a file without class of annotation
 
 Create a new annotation parser.
 
@@ -28,10 +33,10 @@ Create a new annotation parser.
 #### Create an annotation
 
 TestAnnotation.js
+Property tagName define the annotion
 
     var AbstractAnnotation = require('sonata-annotationparser').AbstractAnnotation,
         Utils = require('sonata-annotationparser').UtilsAnnotations,
-        inherits = require('util').inherits;
 
     function TestAnnotation() {
         TestAnnotation.super_.call(this);
@@ -41,22 +46,39 @@ TestAnnotation.js
     inherits(TestAnnotation, AbstractAnnotation);
 
     TestAnnotation.prototype.run = function(value, target, file, filePath) {
-        if (Utils.isString(value) || (value === Object(value) && value.hasOwnProperty('name'))) {
-            //...
-        }
+        //you process
     };
 
     module.exports = ScopeAnnotation;
 
-An object class
+#### Instanciate parser, instanciate annotation, add annotation and extract
 
-    /**
-     * @Test
-     */
-    function object() {
+    var annotationsParser = require('sonata-annotationparser').AnnotationParser;
+    var parser = new annotationsParser();
+    va myAnno = new require('TestAnnotation')();
+    parser.addAnnotation(myAnno);
+    var results = parser.extract(fileName, fileDir);
 
+
+## Parser of dir
+
+#### Instanciate parser and run
+
+    var Parser = require('sonata-annotationparser').dirParser;
+
+    var parse = new Parser({"dirs": './lib', "execDir": __dirname});
+    parse.run();
+
+if you want add annotation, you can add an Annotation.json in dir
+
+sample Annotations.json
+
+    {
+        "Annotations": [
+            "../../lib/Annotations/RessourceAnnotation.js",
+            "../../lib/Annotations/ScopeAnnotation.js"
+        ]
     }
-
 
 
 ## Credits
