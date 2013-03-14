@@ -2,7 +2,7 @@
     "name": "sonata-annotationparser",
     "author": "David TOUZET <dtouzet@gmail.com>",
     "description": "Annotation Parser",
-    "version": "1.0.0-alpha",
+    "version": "1.0.2-alpha",
     "homepage": "http://github.com/eyolas/sonata-annotationparser",
     "repository": {
         "type": "git",
